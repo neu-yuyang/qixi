@@ -1,0 +1,116 @@
+/*
+* @Author: the king
+* @Date:   2017-08-04 17:27:00
+* @Last Modified by:   the king
+* @Last Modified time: 2017-08-07 16:23:17
+/* 
+
+/* 背景图  */
+.b_background {
+	width: 100%;
+	height: 100%;
+	background: url(../images/background/b_background.png) no-repeat;
+	background-size: 100% 100%;
+    position: absolute;
+}
+/* 将灯亮的图片先加载进来，解决闪屏的问题 */
+.b_background_preload {
+    background: url(../images/QixiB-bright.png) no-repeat -9999px -9999px;
+}
+.shop {
+    width: 39.5%;
+    height: 35.5%;
+    position: absolute;
+    left: 29%;
+    top: 36.5%;
+}
+
+.door {
+    position: absolute;
+    width: 32%;
+    height: 100%;
+    top: 32%;
+    height: 68%;
+    overflow: hidden;
+    left: 58.5%;
+}
+.door-left,
+.door-right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.door-left {
+    left: 0%;
+    background: url(../images/door-left.png);
+    background-size: 100% 100%;
+}
+
+.door-right {
+    left: 50%;
+    background: url(../images/door-right.png);
+    background-size: 100% 100%;
+}
+.lamp-bright {
+   background-image: url(../images/QixiB-bright.png);
+}
+
+
+/*鸟*/
+
+.bird {
+    min-width: 91px;
+    min-height: 71px;
+    top: 10%;
+    position: absolute;
+    z-index: 10;
+    right: -91px;
+    background: url(http://img.mukewang.com/55ade1700001b38302730071.png) -182px 0px no-repeat;
+}
+.birdFly {
+    -webkit-animation-name: bird-slow;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-timing-function: step-start;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: bird-slow;
+    -moz-animation-duration: 400ms;
+    -moz-animation-timing-function: step-start;
+    -moz-animation-iteration-count: infinite;
+}
+
+
+/*鸟慢飞*/
+@-webkit-keyframes bird-slow {
+    /* 鸟飞的动作 */
+    0% {
+        background-position: -182px 0px;
+    }
+    50% {
+        background-position: 0px 0px;
+    }
+    75% {
+        background-position: -91px 0px;
+    }
+    100% {
+        background-position: -182px 0px;
+    }
+        
+}
+
+@-moz-keyframes bird-slow {
+    /* 鸟飞的动作 */
+    0% {
+        background-position: -182px 0px;
+    }
+    50% {
+        background-position: 0px 0px;
+    }
+    75% {
+        background-position: -91px 0px;
+    }
+    100% {
+        background-position: -182px 0px;
+    }
+    
+}

@@ -1,0 +1,317 @@
+/*
+* @Author: the king
+* @Date:   2017-08-03 20:56:05
+* @Last Modified by:   the king
+* @Last Modified time: 2017-08-07 17:31:51
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li {
+	list-style: none;
+}
+#content {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+}
+.content-wrap {
+	position: relative;
+}
+.content-wrap > li {
+	
+	color: #f00;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.button {
+	position: absolute;
+	bottom: 0;
+}
+.charector {
+    width: 151px;
+    height: 291px;
+    background: url(../images/boy.png) -0px -291px no-repeat;
+    position: absolute;
+    /* 设置一个元素的坐标 */
+    left: 6%;
+    top: 55%;
+}
+#sun {
+	background: url(../images/sun.png) no-repeat;
+	position: absolute;
+    z-index: 1;
+    top: -30px;
+    height: 201px;
+    width: 201px;
+    right: 40%;
+}
+.cloud {
+	z-index: 2;
+	position: absolute;
+}
+.cloud1 {
+	width: 181px;
+    height: 101px;
+    left: -2%;
+    top: 15%;
+    background: url(../images/cloud1.png) no-repeat;
+}
+.cloud2 {
+	width: 301px;
+    height: 140px;
+    right: -2%;
+    background: url(../images/cloud2.png) no-repeat;
+}
+
+.boyOriginal {
+	background-position: -150px -0px;
+}
+/* 普通慢走 */
+.slowWalk {
+	-webkit-animation-name: person-slow;
+	-webkit-animation-duration: 950ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: steps(1,start);
+	-moz-animation-name: person-slow;
+	-moz-animation-duration: 950ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: steps(1,start);
+}
+
+/* 带花慢走 */
+.slowFlolerWalk {
+   -webkit-animation-name: person-floler-slow;
+   -webkit-animation-duration: 950ms;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: step-start;
+   -moz-animation-name: person-floler-slow;
+   -moz-animation-duration: 950ms;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: step-start;
+}
+.pauseWalk {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+
+}
+.rotation {
+	-webkit-animation-name: rotation;
+	-webkit-animation-duration: 30s;
+	-moz-animation-name: rotation;
+	-moz-animation-duration: 20s;
+}
+.cloudAnim1 {
+	-webkit-animation-name: smallcloud;
+	-webkit-animation-duration: 30s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: smallcloud;
+	-moz-animation-duration: 30s;
+	-moz-animation-iteration-count: infinite;
+}
+.cloudAnim2 {
+	-webkit-animation-name: largecloud;
+	-webkit-animation-duration: 60s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: smallcloud;
+	-moz-animation-duration: 60s;
+	-moz-animation-iteration-count: infinite;
+}
+
+
+/* 云运动关键帧 */
+@-webkit-keyframes smallcloud {
+	0%{
+		left: -2%;
+	}
+	100%{
+		left: 100%;
+	}
+}
+@-moz-keyframes smallcloud {
+	0%{
+		left: -2%;
+	}
+	100%{
+		left: 100%;
+	}
+}
+@-webkit-keyframes largecloud {
+	0%{
+		right: -2%;
+	}
+	100%{
+		right: 100%;
+	}
+}
+@-moz-keyframes largecloud {
+	0%{
+		right: -2%;
+	}
+	100%{
+		right: 100%;
+	}
+}
+/* 太阳运动关键帧 */
+@-webkit-keyframes rotation {
+	0%{
+		transform: translate(0,0);
+		tarnsform: rotate(0deg);
+	}
+	100%{
+		transform: translate(-2000px,400px);
+		tarnsform: rotate(360deg);
+	}
+} 
+@-moz-keyframes rotation {
+	0%{
+		transform: translateX(0,0);
+		tarnsform: rotate(0deg);
+	}
+	100%{
+		transform: translateX(-2000px,400px);
+		tarnsform: rotate(360deg);
+	}
+} 
+/* 普通慢走帧动画 */
+@-webkit-keyframes person-slow {
+	0%{
+		background-position: -0px -291px;
+	}
+	25%{
+		background-position: -602px -0px;
+	}
+	50%{
+		background-position: -302px -291px;
+	}
+	75%{
+		background-position: -151px -291px;
+	}
+	100%{
+		background-position: -0px -291px;
+	}
+}
+
+@-moz-keyframes person-slow {
+	0%{
+		background-position: -0px -291px;
+	}
+	25%{
+		background-position: -602px -0px;
+	}
+	50%{
+		background-position: -302px -291px;
+	}
+	75%{
+		background-position: -151px -291px;
+	}
+	100%{
+		background-position: -0px -291px;
+	}
+} 
+
+ /*带花*/
+   
+@-webkit-keyframes person-floler-slow {
+   0% {
+       background-position: -453px -0px;
+   }
+   25% {
+       background-position: -904px -0px;
+   }
+   50% {
+       background-position: -451px -0px;
+   }
+   75% {
+       background-position: -753px -0px;
+   }
+   100% {
+       background-position: -300px -0px;
+   }
+}
+
+@-moz-keyframes person-floler-slow {
+   0% {
+       background-position: -453px -0px;
+   }
+   25% {
+       background-position: -904px -0px;
+   }
+   50% {
+       background-position: -451px -0px;
+   }
+   75% {
+       background-position: -753px -0px;
+   }
+   100% {
+       background-position: -300px -0px;
+   }
+}
+
+
+/*男孩转身*/
+   
+.boy-rotate {
+   -webkit-animation-name: boy-rotate;
+   -webkit-animation-duration: 850ms;
+   -webkit-animation-iteration-count: 1;
+   -webkit-animation-timing-function: step-start;
+   -webkit-animation-fill-mode: forwards;
+   -moz-animation-name: boy-rotate;
+   -moz-animation-duration: 850ms;
+   -moz-animation-iteration-count: 1;
+   -moz-animation-timing-function: step-start;
+   -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes boy-rotate {
+   0% {
+       background-position: -603px -291px;
+   }
+   16.7% {
+       background-position: -150px -0px;
+   }
+   33.4% {
+       background-position: -453px -291px;
+   }
+   50.1% {
+       background-position: -0px -0px;
+   }
+   66.8% {
+       background-position: -903px -291px;
+   }
+   83.5% {
+       background-position: -753px -291px;
+   }
+   100% {
+       background-position: -603px -291px;
+   }
+}
+
+@-moz-keyframes boy-rotate {
+   0% {
+       /*background-position: -603px -291px;*/
+   }
+   16.7% {
+       background-position: -150px -0px;
+   }
+   33.4% {
+       background-position: -453px -291px;
+   }
+   50.1% {
+       background-position: -0px -0px;
+   }
+   66.8% {
+       background-position: -903px -291px;
+   }
+   83.5% {
+       background-position: -753px -291px;
+   }
+   100% {
+       background-position: -603px -291px;
+   }
+}
